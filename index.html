@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <title>Movies Site</title>
+  </head>
+  <body>
+    <nav id="sideNav" class="h-100 w-25">
+      <div
+        class="innerNav text-white d-flex flex-column justify-content-between align-content-between"
+      >
+        <ul>
+          <li id="playing">
+            <a class="naveItem" data-category="now_playing">Now playing</a>
+          </li>
+          <li id="popular">
+            <a class="naveItem" data-category="popular">Popular</a>
+          </li>
+          <li id="top">
+            <a class="naveItem" data-category="top_rated">Top Rated</a>
+          </li>
+          <li id="latest">
+            <a class="naveItem" data-category="now_playing">Trending</a>
+          </li>
+          <li id="upcoming">
+            <a class="naveItem" data-category="upcoming">Upcoming</a>
+          </li>
+          <li id="contact"><a href="#contactUs">Contact Us</a></li>
+        </ul>
+        <div class="innerFooter ms-3">
+          <div class="innerIcon mb-5 fs-4">
+            <i class="fa-brands me-2 fa-facebook"></i>
+            <i class="fa-brands me-2 fa-twitter"></i>
+            <i class="fa-solid fa-globe"></i>
+          </div>
+          <div class="fs-5">
+            <p>Copyright Â© 2019 All Rights Reserved.</p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="outerNav text-center d-flex flex-column align-items-center justify-content-between"
+      >
+        <img src="images/logo (1).png" alt="" class="w-50 mt-3" />
+        <!-- fa-bars fa-xmark -->
+        <i id="menuBtn" class="fa-solid ms-1 fa-bars fs-2"></i>
+
+        <div class="icon d-flex flex-column mb-4">
+          <i class="fa-solid fa-globe mb-3 fs-3"></i>
+          <i class="fa-solid fa-share-nodes fs-3"></i>
+        </div>
+      </div>
+    </nav>
+    <div class="container overflow-hidden">
+      <div class="inputs my-5">
+        <input
+          type="text"
+          class="form-control text-white"
+          placeholder="get movies by word.."
+          id="wordSearch"
+        />
+        <input
+          type="text"
+          class="form-control text-white"
+          placeholder="search.."
+          id="nameSearch"
+        />
+      </div>
+    </div>
+
+    <section>
+      <div class="container">
+        <div id="row" class="row g-5"></div>
+      </div>
+    </section>
+    <section id="contactUs" class="my-5">
+      <form action="post" class="form">
+        <div class="container">
+          <h3 class="text-white">Contact Us..</h3>
+          <div class="row g-5">
+            <div class="col-6">
+              <input
+                id="name"
+                type="text"
+                class="form-control w-100 formInput text-white text-white"
+                placeholder="Enter Your Name"
+              />
+              <ul
+                class="alert alert-danger p-0 invalid-feedback align-items-center h-50 d-flex align-content-center"
+              >
+                <li class="fs-5">Your Name is not valid</li>
+              </ul>
+            </div>
+            <div class="col-6">
+              <input
+                type="email"
+                id="email"
+                class="form-control w-100 formInput text-white"
+                placeholder="Enter Your Email"
+              />
+              <ul
+                class="alert alert-danger p-0 invalid-feedback h-50 align-items-center d-flex align-content-center"
+              >
+                <li class="fs-5">Enter a valid Email</li>
+              </ul>
+            </div>
+            <div class="col-6">
+              <input
+                type="text"
+                id="phoneNmber"
+                class="form-control w-100 formInput text-white"
+                placeholder="Enter Your Phone Number"
+              />
+              <ul
+                class="alert alert-danger p-0 invalid-feedback h-50 align-items-center d-flex align-content-center"
+              >
+                <li class="fs-5">Enter a valid phone</li>
+              </ul>
+            </div>
+            <div class="col-6">
+              <input
+                type="text"
+                id="age"
+                class="form-control age w-100 formInput text-white"
+                placeholder="Enter Age"
+              />
+              <ul
+                class="alert alert-danger p-0 invalid-feedback h-50 align-items-center d-flex align-content-center"
+              >
+                <li class="fs-5">Enter a valid age</li>
+              </ul>
+            </div>
+            <div class="col-6">
+              <input
+                type="password"
+                id="passowrd"
+                class="form-control password w-100 formInput text-white"
+                placeholder="Enter Password"
+              />
+              <ul
+                class="alert alert-danger p-0 invalid-feedback h-50 align-items-center d-flex align-content-center"
+              >
+                <li class="fs-5">
+                  entre valid password *Minimum eight characters, at least one
+                  letter and one number:*
+                </li>
+              </ul>
+            </div>
+            <div class="col-6">
+              <input
+                type="password"
+                id="reEnterPassword"
+                placeholder="ReEnter Password "
+                class="reEnterPassword form-control w-100 formInput text-white"
+              />
+              <ul
+                class="alert alert-danger p-0 invalid-feedback h-50 align-items-center d-flex align-content-center"
+              >
+                <li class="fs-5">Renter your password</li>
+              </ul>
+            </div>
+          </div>
+          <button
+            id="subBtn"
+            class="btn btn-outline-danger h-50 p-3 mt-3 disabled"
+          >
+            Submit
+          </button>
+        </div>
+      </form>
+    </section>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/home.js" type="module"></script>
+    <script src="js/search.js" type="module"></script>
+  </body>
+</html>
